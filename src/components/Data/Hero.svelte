@@ -22,7 +22,7 @@
 							{blok.subtitle}
 						</h2>
 					</header>
-					<p class="text-sm py-1 px-2 rounded">
+					<p class="text-sm rounded">
 						{blok.body}
 					</p>
 				</article>
