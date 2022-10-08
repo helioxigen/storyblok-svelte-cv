@@ -15,8 +15,6 @@
 		};
 	};
 
-	console.log({ browser });
-
 	assets.forEach((asset) => {
 		const { full, thumb } = modifyImage(asset.filename, 300, 800);
 

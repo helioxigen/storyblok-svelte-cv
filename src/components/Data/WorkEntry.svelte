@@ -15,7 +15,10 @@
 	$: articleHTML = renderRichText(blok.description);
 </script>
 
-<article use:storyblokEditable={blok}>
+<article class="relative" use:storyblokEditable={blok}>
+	<span class="absolute -left-7 border-l-2 h-[calc(100%-10px)]">
+		<span class="absolute top-0 w-3 h-3 -left-1.5 border-2 border-blue-600 bg-white rounded-full" />
+	</span>
 	<header class="flex justify-between mb-4">
 		<span class="mb-4">
 			<h3 class="font-bold">{blok.job_title}</h3>

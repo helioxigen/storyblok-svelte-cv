@@ -5,7 +5,7 @@
 </script>
 
 {#key blok}
-	<div use:storyblokEditable={blok} class="border-t border-gray-300 p-5 pt-12 flex">
+	<div use:storyblokEditable={blok} class="border-t border-gray-300 p-5 pt-12 flex overflow-hidden">
 		<div class="sm:flex w-full">
 			<header class="sm:w-64 flex-shrink-0 mb-8 lg:m-0">
 				<img class="inline mr-1" alt={blok.icon.name} src={blok.icon.filename} />
