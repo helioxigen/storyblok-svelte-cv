@@ -34,7 +34,7 @@
 	<p class="mb-2">
 		<a class="text-blue-400 cursor-pointer" href={blok.product_url}>{blok.product_url}</a>
 	</p>
-	<div>{@html articleHTML}</div>
+	<section class="text-gray-500 font-light">{@html articleHTML}</section>
 	<div class="flex flex-wrap gap-2 mt-4 mb-10">
 		{#each blok.tags?.split('\n') as tag}
 			<Chip {tag} />
