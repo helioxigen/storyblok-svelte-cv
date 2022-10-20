@@ -1,25 +1,23 @@
-import { useStoryblokApi } from "@storyblok/svelte";
+import { useStoryblokApi } from '@storyblok/svelte';
 
 import { storyblokInit, apiPlugin } from '@storyblok/svelte';
-import { components } from "../components/storyblok";
+import { components } from '../components/storyblok';
 
 storyblokInit({
-    accessToken: 'VFtv6KgwooQFkSzOjcDBeAtt',
-    use: [apiPlugin],
-    components
+	accessToken: process.env.STORYBLOK_TOKEN,
+	use: [apiPlugin],
+	components
 });
 
-
 export async function load() {
-    const storyblokApi = useStoryblokApi();
-  const { data } = await storyblokApi.get("cdn/stories/home", {
-    version: "draft",
-  });
+	const storyblokApi = useStoryblokApi();
+	const { data } = await storyblokApi.get('cdn/stories/home', {
+		version: 'draft'
+	});
 
-    
-  return {
-    story: data?.story,
-  };
+	return {
+		story: data?.story
+	};
 }
 
 export const prerender = false;
