@@ -1,10 +1,12 @@
 import { useStoryblokApi } from '@storyblok/svelte';
-
+import { env } from '$env/dynamic/public';
 import { storyblokInit, apiPlugin } from '@storyblok/svelte';
 import { components } from '../components/storyblok';
 
+console.log(env);
+
 storyblokInit({
-	accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
+	accessToken: env.PUBLIC_STORYBLOK_TOKEN,
 	use: [apiPlugin],
 	components
 });
