@@ -4,7 +4,7 @@ import { storyblokInit, apiPlugin } from '@storyblok/svelte';
 import { components } from '../components/storyblok';
 
 storyblokInit({
-	accessToken: process.env.VITE_STORYBLOK_TOKEN,
+	accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
 	use: [apiPlugin],
 	components
 });
