@@ -27,7 +27,7 @@
 	});
 </script>
 
-<div class="pswp-gallery flex flex-wrap gap-0.5" id={galleryID}>
+<div class="pswp-gallery flex flex-wrap gap-0.5 pb-5" id={galleryID}>
 	{#each images as image}
 		<a
 			href={image.src}

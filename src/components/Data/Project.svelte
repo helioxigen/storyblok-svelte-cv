@@ -14,12 +14,14 @@
 	<p class="mb-2">
 		<a class="text-blue-400 cursor-pointer" href={blok.product_url}>{blok.product_url}</a>
 	</p>
-	<section class="text-gray-500 font-light">{@html articleHTML}</section>
+	<section class="text-gray-500 text-sm sm:text-base font-light">{@html articleHTML}</section>
 	<div class="flex flex-wrap gap-2 mt-4 mb-10">
 		{#each blok.tags?.split('\n') as tag}
 			<Chip {tag} />
 		{/each}
 	</div>
-	<h5 class="font-medium mt-4 mb-6">Screenshots</h5>
+	{#if blok.assets.length}
+		<h5 class="font-medium mt-4 mb-6">Screenshots</h5>
+	{/if}
 	<Gallery galleryID={blok.product_title.toLowerCase().replace(/ /g, '')} assets={blok.assets} />
 </section>
